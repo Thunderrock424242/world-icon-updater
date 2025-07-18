@@ -19,12 +19,20 @@ import java.nio.file.Path;
 
 @Mod("worldiconupdater")
 public class WorldIconUpdater {
-    public static final String MODID = "leavingworldicon";
+    public static final String MOD_ID = "worldiconupdater";
     private static boolean takingScreenshot = false;
     private static boolean screenshotPending = false;
 
     public WorldIconUpdater(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
+    }
+
+    public static boolean isScreenshotPending() {
+        return screenshotPending;
+    }
+
+    public static void setScreenshotPending(boolean screenshotPending) {
+        WorldIconUpdater.screenshotPending = screenshotPending;
     }
 
     @SubscribeEvent

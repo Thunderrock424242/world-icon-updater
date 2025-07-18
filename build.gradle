@@ -14,8 +14,8 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
-version = "1.0.0"
-group = mod_group_id
+version = "1.0.1"
+group = "com.thunder.worldiconupdater"
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
@@ -30,7 +30,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     // Specify the version of NeoForge to use.
-    version = project.neo_version
+    version = "21.1.193"
 
     parchment {
         mappingsVersion = project.parchment_mappings_version
@@ -147,7 +147,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_id                 : "worldiconupdater",
             mod_name               : "World Icon Updater",
             mod_license            : mod_license,
-            mod_version            : "1.0.0",
+            mod_version            : "1.0.1",
             mod_authors            : mod_authors,
             mod_description        : mod_description
     ]
